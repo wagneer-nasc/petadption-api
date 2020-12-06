@@ -9,7 +9,7 @@ class Pet {
     @Column()
     name: string;
     @Column()
-    raca: string;
+    name_race: string;
     @Column()
     specie: string;
     @Column()
