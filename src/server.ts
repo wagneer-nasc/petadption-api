@@ -1,7 +1,7 @@
-import 'reflect-metadata'
-import express, { Request, Response, NextFunction } from 'express';
-import './database'
-import routes from './routes'
+import 'reflect-metadata';
+import express from 'express';
+import './database';
+import routes from './routes';
 import cors from 'cors';
 import path from 'path';
 
@@ -11,8 +11,7 @@ app.use(cors());
 app.use(routes);
 
 app.use('/uploads', express.static(path.join(__dirname, '..', 'uploads')));
- 
- 
+
 app.listen(3001, () => {
-    console.log('Starteeeer!!')
+    console.log('Starteeeer!!');
 });

@@ -8,9 +8,8 @@ export default {
         filename: (request, file, cb) => {
             const fileName = `${Date.now()}-${file.originalname}`
 
-            cb(null,fileName);
+            cb(null, fileName);
         },
-
 
     }),
 };

@@ -1,4 +1,7 @@
-import { Column, CreateDateColumn, Entity, JoinColumn, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import {
+    Column, CreateDateColumn, Entity, JoinColumn, OneToMany,
+    PrimaryGeneratedColumn, UpdateDateColumn
+} from "typeorm";
 
 import Image from './Image';
 
@@ -36,7 +39,7 @@ class Pet {
 
     @Column()
     view: number;
-    
+
     @OneToMany(() => Image, image => image.pet, {
         cascade: ['insert', 'update']
     })
